@@ -260,26 +260,26 @@ a {
     .my-face {
       text-align: center;
       padding: 30px 0;
-      translate: all 0.7s;
-    }
-    .my-face img {
+    
+    img {
       width: 300px;
       opacity: 0.7;
       border-radius: 50%;
       cursor: pointer;
-      translate: all 0.7s;
+      transition: all 1s ease;
+      transform: scale(1);
       box-shadow: 10px 10px rgba(203, 105, 193, 0.6);
       -moz-box-shadow: 10px 10px rgba(203, 105, 193, 0.5);
       -webkit-box-shadow: 10px 10px rgba(203, 105, 193, 0.5);
       -o-box-shadow: 10px 10px rgba(203, 105, 193, 0.5);
       &:hover {
-        opacity: 1;
-        box-shadow: 15px 15px rgba(203, 105, 193, 0.6);
-      -moz-box-shadow: 15px 15px rgba(203, 105, 193, 0.5);
-      -webkit-box-shadow: 15px 15px rgba(203, 105, 193, 0.5);
-      -o-box-shadow: 15px 15px rgba(203, 105, 193, 0.5);
+          opacity: 1;
+          transform: scale(1.2);
+          box-shadow: none;
+          border: 10px solid rgba(203, 105, 193, 0.6);
       }
     }
+  }
   }
 
   .skills {
@@ -545,7 +545,7 @@ a {
   align-items: flex-start;
   
   .content{
-    margin-left: 100px;
+
     p{
       width: 600px;
     }
@@ -686,7 +686,7 @@ a {
   #about{
     
     .content{
-      margin-left: 200px;
+      margin-left: 50px;
       p{
       width: 800px;
       font-size: 1.4rem;
@@ -698,7 +698,7 @@ a {
   #education {
     padding:100px 0;
     justify-content: flex-start;
-    margin-left: 120px;
+    margin-left: 50px;
     .uni{
       h2{
         font-size: 3rem;
@@ -763,6 +763,9 @@ a {
   min-height: 80vh;
 }
 #about{
+  .content{
+    margin-left: 100px;
+  }
   .skills{
     max-width: 60vw;
     p{
@@ -770,6 +773,7 @@ a {
     }
   }
 }
+
 .footer{ 
   .icons{
     &::before{
