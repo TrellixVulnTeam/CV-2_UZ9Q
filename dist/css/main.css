@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box; }
 
+html, body {
+  scroll-behavior: smooth; }
+
 body {
   font-family: "Inter", sans-serif;
   background-color: #1f212b; }
@@ -10,6 +13,24 @@ body {
 a {
   text-decoration: none;
   color: #eeedf0; }
+
+.reveal,
+.reveal-instant {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease; }
+
+.reveal-instant {
+  transition: all 3s ease; }
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1; }
+
+.reveal-instant.active {
+  transform: translateY(0px);
+  opacity: 1; }
 
 .webpage-header {
   display: none; }
@@ -352,7 +373,7 @@ a {
           font-size: 16px;
           padding: 10px;
           margin-top: 10px;
-          background-color: #2e313f; }
+          background-color: #cb69c1; }
         #work .work-container .card .caption h2,
         #work .work-container .card .caption p {
           transform: scale(10);
@@ -428,12 +449,13 @@ a {
     .home p {
       width: 400px; }
   #about {
-    align-items: flex-start;
-    margin-left: 100px; }
-    #about .content p {
-      width: 600px; }
-    #about .content .my-face {
-      text-align: center; }
+    align-items: flex-start; }
+    #about .content {
+      margin-left: 100px; }
+      #about .content p {
+        width: 600px; }
+      #about .content .my-face {
+        text-align: center; }
     #about .skills p {
       width: 500px; }
     #about .skills .skills-set i, #about .skills .skills-set img {
@@ -459,7 +481,7 @@ a {
     .webpage-header li {
       padding: 20px 30px; }
   .home {
-    margin-top: 300px;
+    margin-top: 230px;
     margin-left: 100px; }
     .home p {
       width: 450px; }
@@ -518,7 +540,7 @@ a {
       width: 600px;
       font-size: 1.4rem;
       line-height: 1.8rem; }
-  #about {
+  #about .content {
     margin-left: 200px; }
     #about .content p {
       width: 800px;
