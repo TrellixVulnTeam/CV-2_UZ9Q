@@ -697,6 +697,8 @@ a {
   }
   #education {
     padding:100px 0;
+    justify-content: flex-start;
+    margin-left: 120px;
     .uni{
       h2{
         font-size: 3rem;
@@ -709,7 +711,7 @@ a {
       }
     }
     .courses{
-      margin-right: 20px;
+
       h2{
         font-size: 3rem;
       }

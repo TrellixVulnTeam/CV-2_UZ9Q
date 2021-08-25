@@ -547,19 +547,19 @@ a {
       font-size: 1.4rem;
       line-height: 1.8rem; }
   #education {
-    padding: 100px 0; }
+    padding: 100px 0;
+    justify-content: flex-start;
+    margin-left: 120px; }
     #education .uni h2 {
       font-size: 3rem; }
     #education .uni h5 {
       font-size: 1rem; }
     #education .uni p {
       font-size: 1.4rem; }
-    #education .courses {
-      margin-right: 20px; }
-      #education .courses h2 {
-        font-size: 3rem; }
-      #education .courses h4 {
-        font-size: 1.3rem; }
+    #education .courses h2 {
+      font-size: 3rem; }
+    #education .courses h4 {
+      font-size: 1.3rem; }
   #work .content {
     margin-left: 200px; }
     #work .content p {
