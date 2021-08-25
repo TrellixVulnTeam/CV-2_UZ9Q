@@ -527,6 +527,17 @@ a {
      &:hover{
        opacity:1;
      }
+     &::after{
+      display:block;
+      content: '';
+      border-bottom: solid 3px #cb69c1;  
+      transform: scaleX(0);  
+      transition: transform 0.5s ease-in-out;
+      margin-top:5px;
+     }
+     &:hover::after{
+      transform: scaleX(1);
+     }
      
    }
  
