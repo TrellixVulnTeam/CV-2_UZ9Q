@@ -45,3 +45,4 @@ window.onload= () => {
         revealsInstant[i].classList.add('active');
     }
 }
+

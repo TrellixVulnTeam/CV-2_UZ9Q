@@ -1,68 +1,22 @@
+@import "utilities";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html,body{
+html,
+body {
   scroll-behavior: smooth;
 }
 body {
   font-family: "Inter", sans-serif;
-  // background-image: linear-gradient(#1f212b, #17181f);
-  //height: 100%;
   background-color: #1f212b;
 }
 a {
   text-decoration: none;
   color: #eeedf0;
 }
-.reveal,
-.reveal-instant{
-  position:relative;
-  transform: translateY(150px);
-  opacity:0;
-  transition: all 2s ease;
-}
-.reveal-instant{
-  transition: all 3s ease;
-}
-.reveal.active {
-  transform:translateY(0px);
-  opacity:1;
-}
-.reveal-instant.active{
-  transform:translateY(0px);
-  opacity:1;
-}
-.webpage-header{
-  display: none;
-}
-.btn {
-  font-size: 18px;
-  color: #eeedf0;
-  border: 3px solid #eeedf0;
-  padding: 10px 20px;
-  transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-  &:hover {
-    background-color: #cb69c1;
-  }
-  &::before {
-    content: "";
-    background-color: #eeedf0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 15px;
-    position: absolute;
-    transform: translateX(-100%) rotate(45deg);
-    transition: all 0.3s;
-  }
-  &:hover::before {
-    transform: translateX(100%) rotate(45deg);
-  }
-}
+
 .header {
   position: fixed;
   width: 100%;
@@ -215,35 +169,6 @@ a {
   }
 }
 
-.title,
-.title2 {
-  margin:50px 0;
-  color: #6c72cb;
-  h3 {
-    font-weight: 200;
-    text-align: left ;
-    font-size: 2rem;
-    padding: 0 20px;
-    &::after {
-      content: "";
-      width: 100%;
-      height: 1px;
-      background-color: #6c72cb;
-      position: absolute;
-      margin: 15px 0;
-      left: 0;
-      margin-top: 40px;
-    }
-  }
-}
-.title2 {
-  h3 {
-    &::after {
-      width: 57%;
-    }
-  }
-}
-
 #about {
   min-height: 100vh;
   display: flex;
@@ -260,26 +185,26 @@ a {
     .my-face {
       text-align: center;
       padding: 30px 0;
-    
-    img {
-      width: 300px;
-      opacity: 0.7;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: all 1s ease;
-      transform: scale(1);
-      box-shadow: 10px 10px rgba(203, 105, 193, 0.6);
-      -moz-box-shadow: 10px 10px rgba(203, 105, 193, 0.5);
-      -webkit-box-shadow: 10px 10px rgba(203, 105, 193, 0.5);
-      -o-box-shadow: 10px 10px rgba(203, 105, 193, 0.5);
-      &:hover {
+
+      img {
+        width: 300px;
+        opacity: 0.7;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 1s ease;
+        transform: scale(1);
+        box-shadow: 10px 10px rgba(203, 105, 193, 0.6);
+        -moz-box-shadow: 10px 10px rgba(203, 105, 193, 0.5);
+        -webkit-box-shadow: 10px 10px rgba(203, 105, 193, 0.5);
+        -o-box-shadow: 10px 10px rgba(203, 105, 193, 0.5);
+        &:hover {
           opacity: 1;
           transform: scale(1.2);
           box-shadow: none;
           border: 10px solid rgba(203, 105, 193, 0.6);
+        }
       }
     }
-  }
   }
 
   .skills {
@@ -303,9 +228,9 @@ a {
         padding: 35px 10px;
         color: #eeedf0;
         opacity: 0.9;
-        translate: all 0.4s ease-in-out;
         cursor: pointer;
         top: 0;
+        transition: all 0.4s;
         &:hover {
           opacity: 1;
           position: relative;
@@ -326,7 +251,7 @@ a {
   align-items: center;
   justify-content: center;
   text-align: left;
- 
+
   h2 {
     color: #cb69c1;
     font-size: 2rem;
@@ -342,7 +267,20 @@ a {
   .uni {
     padding: 30px 0;
     text-align: left;
-
+    h2{
+      cursor:pointer;
+      &::after{
+        display:block;
+        content: '';
+        border-bottom: solid 3px #6c72cb;  
+        transform: scaleX(0);  
+        transition: transform 0.5s ease-in-out;
+        width: 60%;
+      }
+      &:hover::after{
+        transform: scaleX(1);
+      }
+    }
     h5 {
       color: #cb69c1;
       opacity: 0.5;
@@ -458,26 +396,26 @@ a {
     }
   }
 }
-#contact{
+#contact {
   min-height: 100vh;
-  .contact-container{ 
+  .contact-container {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     height: 100%;
     text-align: left;
-    padding:40px;
-    h4{
+    padding: 40px;
+    h4 {
       color: #6c72cb;
-    opacity: 0.8;
-    font-weight: 400;
-    font-size: 1.4rem;
+      opacity: 0.8;
+      font-weight: 400;
+      font-size: 1.4rem;
     }
-    h1{  font-size: 3.2rem;
+    h1 {
+      font-size: 3.2rem;
       color: #cb69c1;
       opacity: 0.9;
       padding: 10px 0;
-
     }
     p {
       color: #6c72cb;
@@ -493,311 +431,5 @@ a {
     }
   }
 }
-.flat {
-  width: 60px;
-}
 
-.color {
-  color: #cb69c1;
-}
-.color2 {
-  color: #6c72cb;
-  font-weight: 500;
-}
-
-.top {
-  background: transparent;
-}
-
-//MEDIAS
-@media screen and (min-width: 620px) {
-.hamburger{
-  display: none;
-}
-.webpage-header{
-  display: flex;
-  li{
-    list-style: none;
-    padding:10px;
-    height: 100%;
-   a{
-     color:#6c72cb;
-     opacity: 0.8;
-     transition: 0.2s;
-     &:hover{
-       opacity:1;
-     }
-     &::after{
-      display:block;
-      content: '';
-      border-bottom: solid 3px #cb69c1;  
-      transform: scaleX(0);  
-      transition: transform 0.5s ease-in-out;
-      margin-top:5px;
-     }
-     &:hover::after{
-      transform: scaleX(1);
-     }
-     
-   }
- 
-  }
-}
-
-.home{
-  margin-top: 200px;
-  margin-left:50px;
-  min-height: 70vh;
-  p{
-    width: 400px;
-  }
-}
-#about{
-  align-items: flex-start;
-  
-  .content{
-
-    p{
-      width: 600px;
-    }
-    .my-face {
-      text-align: center;
-    }
-  }
-  .skills{
-    p{
-      width: 500px;
-    }
-    .skills-set{
-      i,img{
-        padding:25px 20px;
-      }
-    }
-  }
-}
-.flat{
-  width: 80px;
-}
-#education {
-  min-height: 70vh;
-  flex-direction: row;
-}
-#contact{
-  min-height: 60vh;
-  margin-top: 100px;
-  margin-left:50px;
-  p{
-    width: 400px;
-  }
-  .contact-container{
-    margin-top: 200px;
-  }
-}
-
-}
-
-@media screen and (min-width: 960px){
-  
-  .webpage-header{
-    height: 50px;
-    text-align: center;
-    li{
-      padding:20px 30px;   
-    }
-  }
-  
-  .home{
-    margin-top: 230px;
-    margin-left:100px;
-    p{
-      width: 450px;
-    }
-  }
-
-  #about{
-  
-    .content{
-      margin: 100px 0;
-      display: flex;
-      flex-direction: row;
-      height: 100%;
-      align-items: center;
-      justify-content: center;
-      margin-right: 150px;
-      p{
-        width: 600px;
-      }
-      .my-face {
-        text-align: center;
-      }
-    }
-    .skills{
-      max-width: 60vw;
-      p{
-        width: 500px;
-      }
-      .skills-set{
-        i,img{
-          padding:35px 30px;
-        }
-      }
-    }
-  }
-  .flat{
-    width: 100px;
-  }
-  #education {
-    min-height: 60vh;
-    flex-direction: row;
-    .uni{
-      padding: 0 80px;
-    }
-  }
-  #work{
-    max-width: 60vw;
-    margin-left: 100px;
-    min-height: 80vh;
-    .work-container{
-      margin-left: 200px;
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      grid-gap:100px;
-      min-height: 20vh;
-    }
-  }
-  #contact{
-    margin-top: 150px;
-    margin-left:100px;
-    min-height: 50vh;
-    p{
-      width: 400px;
-    }
-    .contact-container{
-      margin-top: 200px;
-    }
-  }
-  
-
-}
-@media screen and (min-width: 1200px) {
-  .home{
-    margin-left: 200px;
-    h1{
-      font-size: 4rem;
-    }
-    h2{
-      font-size: 3.5rem;
-    }
-    p{
-      width: 600px;
-      font-size: 1.4rem;
-      line-height: 1.8rem;
-    }
-  }
-  #about{
-    
-    .content{
-      margin-left: 50px;
-      p{
-      width: 800px;
-      font-size: 1.4rem;
-      line-height: 1.8rem;
-    }
-    }
-    
-  }
-  #education {
-    padding:100px 0;
-    justify-content: flex-start;
-    margin-left: 50px;
-    .uni{
-      h2{
-        font-size: 3rem;
-      }
-      h5{
-        font-size: 1rem;
-      }
-      p{
-        font-size: 1.4rem;
-      }
-    }
-    .courses{
-
-      h2{
-        font-size: 3rem;
-      }
-      h4{
-        font-size: 1.3rem;
-      }
-    }
-  }
-  #work{
-    .content {
-      margin-left: 200px;
-      p{
-        font-size: 1.4rem;
-      }
-    }
-  }
-  #contact{
-    min-height: 70vh;
-    margin-left: 200px;
-    .contact-container{
-       h1{
-      font-size: 4rem;
-    }
-    h2{
-      font-size: 3.5rem;
-    }
-    p{
-      width: 600px;
-      font-size: 1.4rem;
-      line-height: 1.8rem;
-    }
-    }
-   
-  }
-}
-
-
-
-@media screen and (min-width: 1500px){
-  #work{
-    .work-container{
-    
-      grid-template-columns: repeat(3,1fr);
-      grid-gap:100px;
-      min-height: 20vh;
-    }
-}
-#contact{
-  min-height: 80vh;
-}
-#about{
-  .content{
-    margin-left: 100px;
-  }
-  .skills{
-    max-width: 60vw;
-    p{
-      width: 100%;
-    }
-  }
-}
-
-.footer{ 
-  .icons{
-    &::before{
-      content: '';
-      height: 1px;
-      width: 80%;
-      background-color: #eeedf0;
-      position: absolute;
-      right: 0;
-      bottom:50%;
-      left:6%;
-      z-index: 1000;
-    }
-  }
-}
-}
+@import "medias";
