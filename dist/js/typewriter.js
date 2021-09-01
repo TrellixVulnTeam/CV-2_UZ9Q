@@ -63,4 +63,4 @@ class TypeWriter {
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
   }
-  
+  /*Typewriter based on TRAVERSY MEDIA'S */
